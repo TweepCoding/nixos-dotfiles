@@ -7,7 +7,6 @@
       monitor = [
         "eDP-1,highres,auto,1,bitdepth,8"
         "HDMI-A-1,highres,auto,1,bitdepth,8,mirror,eDP-1"
-        "Virtual-1,highres,auto,1,bitdepth,8"
       ];
 
       "$terminal" = userSettings.term;
