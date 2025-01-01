@@ -10,6 +10,7 @@
         wallpaper = [
           "eDP-1,${backgroundPicture}"
           "HDMI-A-1,${backgroundPicture}"
+          "Virtual-1,${backgroundPicture}"
         ];
       };
   };
