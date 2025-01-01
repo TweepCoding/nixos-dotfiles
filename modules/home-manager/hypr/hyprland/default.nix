@@ -5,6 +5,7 @@
     settings = {
 
       monitor = [
+        ",preferred,auto,1"
         "eDP-1,highres,auto,1,bitdepth,8"
         "HDMI-A-1,highres,auto,1,bitdepth,8,mirror,eDP-1"
       ];
