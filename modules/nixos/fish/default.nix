@@ -16,7 +16,7 @@
       	'';
     shellAliases = {
       vite = null;
-      nixpublish = "git -C ~/.config/nixos/ push orign main";
+      nixpublish = "git -C ~/.config/nixos/ push origin main";
       p = "cd ~/Programming/(search_dirs) && tmux";
     };
   };
