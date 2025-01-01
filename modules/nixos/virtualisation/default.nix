@@ -9,11 +9,14 @@
       qemu.options = [
         "-device virtio-vga-gl"
         "-display sdl,gl=on,show-cursor=off"
-        "-audiodev pipewire,id=audio0"
-        "-device intel-hda"
-        "-device hda-output,audiodev=audio0"
+        "-audio pa,model=hda"
+        "-full-screen"
       ];
     };
+
+    services.interception-tools.enable = lib.mkForce false;
+    networking.resolvconf.enable = lib.mkForce true;
+    zramSwap.enable = lib.mkForce false;
 
     environment.sessionVariables = lib.mkVMOverride {
       WLR_NO_HARDWARE_CURSORS = "1";
