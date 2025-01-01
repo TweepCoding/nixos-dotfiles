@@ -109,6 +109,12 @@ in
     nix-index
     nix-edit-script
     grimblast
+    qemu
+    libvirt
+    virt-manager
+    sdl2
+    mesa
+    virglrenderer
   ];
 
   programs = {
