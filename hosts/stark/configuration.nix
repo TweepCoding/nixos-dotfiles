@@ -112,7 +112,7 @@ in
     qemu
     libvirt
     virt-manager
-    sdl2
+    SDL2
     mesa
     virglrenderer
   ];
