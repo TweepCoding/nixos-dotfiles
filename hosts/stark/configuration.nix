@@ -19,7 +19,6 @@ in
     ./hardware-configuration.nix
     ../../modules/nixos/sops
     ../../modules/nixos/fish
-    ../../modules/nixos/nixgitsync
     inputs.home-manager.nixosModules.default
   ];
 
