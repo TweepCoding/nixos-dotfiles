@@ -42,7 +42,7 @@ in
 
   users.users.${userSettings.username} = {
     isNormalUser = true;
-    initialPassword = "";
+    initialPassword = userSettings.username;
     description = userSettings.name;
     shell = pkgs.fish;
     extraGroups = [
