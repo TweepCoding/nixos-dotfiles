@@ -1,4 +1,4 @@
-{ systemSettings, pkgs, ... }:
+{ pkgs, ... }:
 {
   programs.fish = {
     enable = true;
@@ -16,7 +16,6 @@
       	'';
     shellAliases = {
       vite = null;
-      nixedit = "pushd ~/.config/nixos/ && nvim && sudo nixos-rebuild switch --flake .#${systemSettings.hostname} && git add . && git commit && popd";
       p = "cd ~/Programming/(search_dirs) && tmux";
     };
   };

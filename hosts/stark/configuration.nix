@@ -10,6 +10,9 @@
   ...
 }:
 
+let
+  nix-edit-script = import ../../modules/nixos/nixedit { inherit pkgs systemSettings; };
+in
 {
   imports = [
     # include the results of the hardware scan.
@@ -103,6 +106,7 @@
     pamixer
     sops
     nix-index
+    nix-edit-script
     grimblast
   ];
 
