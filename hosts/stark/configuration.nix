@@ -19,6 +19,7 @@ in
     ./hardware-configuration.nix
     ../../modules/nixos/sops
     ../../modules/nixos/fish
+    ../../modules/nixos/virtualisation
     inputs.home-manager.nixosModules.default
   ];
 
