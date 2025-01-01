@@ -8,7 +8,7 @@
       # to enable Hyprland to work on a virtualized GPU.
       qemu.options = [
         "-device virtio-vga-gl"
-        "-display sdl,gl=on,show-cursor=off"
+        "-display gtk,gl=on,show-cursor=off"
         "-audio pa,model=hda"
         "-full-screen"
       ];
