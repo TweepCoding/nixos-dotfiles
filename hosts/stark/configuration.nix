@@ -49,11 +49,8 @@ in
     extraGroups = [
       "networkmanager"
       "wheel"
-      "libvirtd"
     ];
   };
-
-  users.groups.libvirtd.members = [ userSettings.username ];
 
   environment.systemPackages = with pkgs; [
     btrfs-progs # tools to use btrfs with
@@ -102,7 +99,6 @@ in
     wget
     inputs.zen-browser.packages."${pkgs.system}".default # zen browser
     libinput
-    libnl # waybar needs this to read network stuff. huh
     rofi-wayland
     vesktop
     hyprpolkitagent
@@ -112,12 +108,6 @@ in
     nix-index
     nix-edit-script
     grimblast
-    qemu
-    libvirt
-    virt-manager
-    SDL2
-    mesa
-    virglrenderer
   ];
 
   programs = {
@@ -139,7 +129,6 @@ in
       thunar-volman
       tumbler
     ];
-    virt-manager.enable = false;
     xwayland.enable = true;
     dconf.enable = true;
     fuse.userAllowOther = true;

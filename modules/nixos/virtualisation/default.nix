@@ -1,8 +1,6 @@
 { lib, ... }:
 {
   virtualisation = {
-    libvirtd.enable = true;
-    spiceUSBRedirection.enable = true;
     vmVariant = {
       virtualisation = {
         memorySize = 8192; # Use 8192MiB memory.
