@@ -7,8 +7,8 @@
       # Taken from https://github.com/donovanglover/nix-config/commit/0bf134297b3a62da62f9ee16439d6da995d3fbff
       # to enable Hyprland to work on a virtualized GPU.
       qemu.options = [
-        "-device virtio-vga-gl"
-        "-display gtk,gl=on,show-cursor=off"
+        "-device virtio-vga"
+        "-display sdl"
         "-audio pa,model=hda"
         "-full-screen"
       ];
