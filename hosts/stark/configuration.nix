@@ -52,6 +52,8 @@ in
     ];
   };
 
+  users.groups.libvirtd.members = [ userSettings.username ];
+
   environment.systemPackages = with pkgs; [
     btrfs-progs # tools to use btrfs with
     curl
@@ -128,7 +130,6 @@ in
     waybar.enable = true;
     hyprlock.enable = true;
     nm-applet.indicator = true;
-
     thunar.enable = true;
     thunar.plugins = with pkgs.xfce; [
       exo
