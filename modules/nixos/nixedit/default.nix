@@ -19,8 +19,8 @@ pkgs.writeScriptBin "nixedit" ''
 
   # Perform the rebuild
   if not nixos-rebuild --use-remote-sudo switch --flake .#${systemSettings.hostname}
-      echo "Rebuild failed or interrupted. Reverting the commit."
-      git reset --hard HEAD^
+      echo "Rebuild failed or interrupted. Marking the commit."
+      git commit --amend -m "Failed Pre-rebuild: Updated NixOS configuration"
       popd > /dev/null
       exit 1
   end
