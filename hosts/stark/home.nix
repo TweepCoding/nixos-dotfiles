@@ -14,6 +14,7 @@
     ../../modules/home-manager/rofi
     ../../modules/home-manager/git
     ../../modules/home-manager/ssh
+    ../../modules/home-manager/ghostty
   ];
 
   home = {
