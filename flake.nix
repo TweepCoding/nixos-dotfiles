@@ -62,12 +62,18 @@
           inherit inputs;
           inherit outputs;
         };
-        modules = [
-          ./hosts/stark/configuration.nix
-          home-manager.nixosModules.default
-          nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen2
-          sops-nix.nixosModules.sops
-        ];
+        modules =
+          [
+            ./hosts/stark/configuration.nix
+            home-manager.nixosModules.default
+            sops-nix.nixosModules.sops
+          ]
+          ++ (
+            if systemSettings.hostname == "stark" then
+              [ nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen2 ]
+            else
+              [ ]
+          );
       };
     };
 }
