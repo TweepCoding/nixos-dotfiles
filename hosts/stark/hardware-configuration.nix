@@ -6,6 +6,7 @@
   lib,
   pkgs,
   modulesPath,
+  userSettings,
   ...
 }:
 
@@ -53,6 +54,7 @@
   fileSystems."/home" = {
     device = "/dev/disk/by-uuid/947c039c-b3c6-4221-b8ca-2c998c913b35";
     fsType = "btrfs";
+    neededForBoot = true;
     options = [ "subvol=home" ];
   };
 
