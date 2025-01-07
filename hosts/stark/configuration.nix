@@ -39,8 +39,6 @@ in
     keyMap = "us";
   };
 
-  hardware.pulseaudio.enable = false;
-
   users.users.${userSettings.username} = {
     isNormalUser = true;
     initialPassword = userSettings.username;
