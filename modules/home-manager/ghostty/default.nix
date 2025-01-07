@@ -8,6 +8,7 @@
       font-size = 12;
       font-family = userSettings.font;
       window-decoration = false;
+      resize-overlay-position = "bottom-right";
     };
   };
 }
