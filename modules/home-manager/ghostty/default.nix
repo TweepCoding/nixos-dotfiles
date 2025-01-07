@@ -5,6 +5,7 @@
     settings = {
       theme = "catppuccin-mocha";
       font-size = 12;
+      window-decoration = false;
     };
   };
 }
