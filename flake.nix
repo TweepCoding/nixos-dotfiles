@@ -64,7 +64,7 @@
         modules = [
           ./hosts/stark/configuration.nix
           inputs.home-manager.nixosModules.default
-          inputs.nixos-hardware.nixosModules.thinkpad-t14-amd-gen2
+          inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen2
         ];
       };
     };
