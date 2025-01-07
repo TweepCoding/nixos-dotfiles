@@ -1,14 +1,31 @@
-{ userSettings, ... }:
+{
+  lib,
+  userSettings,
+  systemSettings,
+  ...
+}:
 {
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
 
-      monitor = [
-        ",preferred,auto,1"
-        "eDP-1,highres,auto,1,bitdepth,8"
-        "HDMI-A-1,highres,auto,1,bitdepth,8,mirror,eDP-1"
-      ];
+      monitor =
+        [
+          ",preferred,auto,1"
+        ]
+        ++ (
+          if systemSettings.hostname == "stark" then
+            [
+              "eDP-1,highres,auto,1,bitdepth,8"
+              "HDMI-A-1,highres,auto,1,bitdepth,8,mirror,eDP-1"
+            ]
+          else if systemSettings.hostname == "eisen" then
+            [
+              "HDMI-A-1,highres,auto,1,bitdepth,8"
+            ]
+          else
+            [ ]
+        );
 
       "$terminal" = userSettings.term;
       "$fileManager" = userSettings.fileManager;
@@ -42,10 +59,12 @@
         };
       };
 
-      device = {
-        name = "synps/2-synaptics-touchpad";
-        enabled = false;
-      };
+      device = lib.optional (systemSettings.hostname == "stark") [
+        {
+          name = "synps/2-synaptics-touchpad";
+          enabled = false;
+        }
+      ];
 
       general = {
         gaps_in = 4;
