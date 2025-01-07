@@ -20,7 +20,6 @@ in
     ../../modules/nixos/sops
     ../../modules/nixos/fish
     ../../modules/nixos/virtualisation
-    inputs.home-manager.nixosModules.default
   ];
 
   boot.loader.systemd-boot.enable = true;
