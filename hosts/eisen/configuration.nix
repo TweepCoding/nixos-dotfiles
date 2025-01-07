@@ -27,7 +27,6 @@ in
 
   networking.hostName = systemSettings.hostname;
   networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.powersave = true;
 
   time.timeZone = systemSettings.timezone;
 

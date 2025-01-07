@@ -36,12 +36,6 @@
     }@inputs:
     let
       inherit (self) outputs;
-      systemSettings = {
-        system = "x86_64-linux";
-        hostname = "stark";
-        timezone = "America/Bogota";
-        locale = "en_US.UTF-8";
-      };
       userSettings = {
         name = "Tweep";
         username = "tweep";
@@ -54,26 +48,52 @@
       };
     in
     {
-      nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
-        system = systemSettings.system;
-        specialArgs = {
-          inherit systemSettings;
-          inherit userSettings;
-          inherit inputs;
-          inherit outputs;
-        };
-        modules =
-          [
+      nixosConfigurations.stark =
+        let
+          systemSettings = {
+            system = "x86_64-linux";
+            timezone = "America/Bogota";
+            locale = "en_US.UTF-8";
+            hostname = "stark";
+          };
+        in
+        nixpkgs.lib.nixosSystem {
+          system = systemSettings.system;
+          specialArgs = {
+            inherit systemSettings;
+            inherit userSettings;
+            inherit inputs;
+            inherit outputs;
+          };
+          modules = [
             ./hosts/stark/configuration.nix
             home-manager.nixosModules.default
             sops-nix.nixosModules.sops
-          ]
-          ++ (
-            if systemSettings.hostname == "stark" then
-              [ nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen2 ]
-            else
-              [ ]
-          );
-      };
+            nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen2
+          ];
+        };
+      nixosConfigurations.eisen =
+        let
+          systemSettings = {
+            system = "x86_64-linux";
+            timezone = "America/Bogota";
+            locale = "en_US.UTF-8";
+            hostname = "eisen";
+          };
+        in
+        nixpkgs.lib.nixosSystem {
+          system = systemSettings.system;
+          specialArgs = {
+            inherit systemSettings;
+            inherit userSettings;
+            inherit inputs;
+            inherit outputs;
+          };
+          modules = [
+            ./hosts/eisen/configuration.nix
+            home-manager.nixosModules.default
+            sops-nix.nixosModules.sops
+          ];
+        };
     };
 }
