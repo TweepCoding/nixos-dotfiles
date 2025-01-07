@@ -93,14 +93,12 @@
           tooltip-format-enumerate-connected = "{device_alias} {device_address}";
         };
         network = {
-          interval = 2;
-          interface = "wlp3s0";
-          format = "{essid}";
-          format-wifi = "<span>󰖩  </span>{essid}";
-          format-linked = "<span>󰖩  </span>{essid}";
-          format-ethernet = "{ipaddr}/{cidr} 󰈀";
-          format-disconnected = "<span>󰖪  </span>No Network";
-          tooltip = false;
+          format-wifi = "󰖩 {essid} ({signalStrength}%)";
+          format-linked = "󱚵 {essid} (No IP)";
+          format-ethernet = "󰈀 {ifname}";
+          tooltip-format = "{ifname} via {gwaddr}";
+          format-disconnected = "󰖪 No Network";
+          format-alt = "󰖩 {ifname}: {ipaddr}/{cidr}";
         };
         battery = {
           format = "{icon} {capacity}%";
