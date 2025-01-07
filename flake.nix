@@ -45,8 +45,8 @@
         wm = "hyprland";
         browser = "zen";
         fileManager = "thunar";
-        term = "alacritty";
-        font = "MesloLGS NF";
+        term = "ghostty";
+        font = "JetBrainsMono Nerd Font Mono";
         editor = "nvim";
       };
     in
