@@ -59,12 +59,10 @@
         };
       };
 
-      device = lib.optional (systemSettings.hostname == "stark") [
-        {
-          name = "synps/2-synaptics-touchpad";
-          enabled = false;
-        }
-      ];
+      device = lib.optional (systemSettings.hostname == "stark") {
+        name = "synps/2-synaptics-touchpad";
+        enabled = false;
+      };
 
       general = {
         gaps_in = 4;
