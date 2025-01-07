@@ -6,16 +6,16 @@
   min-height: 20px;
   padding-top: 1px;
   padding-bottom: 1px;
+  color: #ffffff;
 }
 
 window#waybar.background {
   background: #313244;
 }
 
-#custom-arch,
+#custom-nixos,
 #workspaces {
   border-radius: 10px;
-  color: #ffffff;
   margin-top: 0px;
   margin-right: 12px;
   padding-top: 1px;
@@ -23,15 +23,10 @@ window#waybar.background {
   padding-right: 8px;
 }
 
-#custom-arch {
+#custom-nixos {
   font-size: 16px;
   margin-left: 6px;
   padding-right: 6px;
-  color: #ffffff;
-}
-
-#workspaces button {
-  color: #ffffff;
 }
 
 #clock,
@@ -39,7 +34,6 @@ window#waybar.background {
 #pulseaudio,
 #bluetooth,
 #battery {
-  color: #ffffff;
   margin-top: 0px;
   padding-left: 12px;
   padding-right: 12px;
