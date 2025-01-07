@@ -105,6 +105,7 @@ in
     sops
     nix-index
     nix-edit-script
+    lutgen
     grimblast
   ];
 
