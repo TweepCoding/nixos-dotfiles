@@ -54,7 +54,6 @@
       };
       pkgs = import nixpkgs {
         overlays = [
-          self.overlays
           audio.overlays.default
         ];
       };
