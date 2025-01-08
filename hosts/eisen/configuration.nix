@@ -104,6 +104,7 @@ in
     nix-index
     nix-edit-script
     lutgen
+    testdisk
     grimblast
   ];
 
