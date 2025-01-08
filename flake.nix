@@ -53,7 +53,10 @@
         editor = "nvim";
       };
       pkgs = import nixpkgs {
-        overlays = [ audio.overlays.default ];
+        overlays = [
+          self.overlays
+          audio.overlays.default
+        ];
       };
     in
     {
