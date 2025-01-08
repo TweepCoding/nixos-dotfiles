@@ -50,7 +50,7 @@
         repeat_delay = 300;
 
         follow_mouse = 1;
-        sensitivity = 1;
+        sensitivity = (if systemSettings.hostname == "stark" then 1 else 0.5);
 
         touchpad = {
           disable_while_typing = false;
