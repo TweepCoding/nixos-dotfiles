@@ -111,6 +111,8 @@ in
     neuralnote
     bitwig-studio5-latest
     godot_4
+    godot_4-export-templates
+    gdtoolkit_4
     grimblast
   ];
 
