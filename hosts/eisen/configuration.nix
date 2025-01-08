@@ -29,6 +29,7 @@ in
   networking.networkmanager.enable = true;
 
   time.timeZone = systemSettings.timezone;
+  hardware.clockInUtc = false;
 
   i18n.defaultLocale = systemSettings.locale;
   console = {
