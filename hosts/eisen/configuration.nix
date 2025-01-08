@@ -105,6 +105,8 @@ in
     nix-edit-script
     lutgen
     testdisk
+    neuralnote
+    bitwig-studio5-latest
     grimblast
   ];
 

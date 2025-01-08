@@ -6,6 +6,11 @@
     hyprland.url = "github:hyprwm/Hyprland";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
+    audio = {
+      url = "github:polygon/audio.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +37,7 @@
       nixos-hardware,
       home-manager,
       sops-nix,
+      audio,
       ...
     }@inputs:
     let
@@ -70,6 +76,17 @@
             home-manager.nixosModules.default
             sops-nix.nixosModules.sops
             nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen2
+            (
+              { pkgs, ... }:
+              {
+                nixpkgs = {
+                  overlays = [
+                    self.overlay
+                    audio.overlays.default
+                  ];
+                };
+              }
+            )
           ];
         };
       nixosConfigurations.eisen =
@@ -93,6 +110,17 @@
             ./hosts/eisen/configuration.nix
             home-manager.nixosModules.default
             sops-nix.nixosModules.sops
+            (
+              { pkgs, ... }:
+              {
+                nixpkgs = {
+                  overlays = [
+                    self.overlay
+                    audio.overlays.default
+                  ];
+                };
+              }
+            )
           ];
         };
     };
