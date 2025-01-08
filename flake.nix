@@ -52,11 +52,6 @@
         font = "JetBrainsMono Nerd Font Mono";
         editor = "nvim";
       };
-      pkgs = import nixpkgs {
-        overlays = [
-          audio.overlays.default
-        ];
-      };
     in
     {
       nixosConfigurations.stark =
@@ -68,7 +63,7 @@
             hostname = "stark";
           };
         in
-        pkgs.lib.nixosSystem {
+        nixpkgs.lib.nixosSystem {
           system = systemSettings.system;
           specialArgs = {
             inherit systemSettings;
@@ -92,7 +87,7 @@
             hostname = "eisen";
           };
         in
-        pkgs.lib.nixosSystem {
+        nixpkgs.lib.nixosSystem {
           system = systemSettings.system;
           specialArgs = {
             inherit systemSettings;
