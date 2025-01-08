@@ -49,7 +49,7 @@ in
     ];
   };
 
-  nixpkgs.overlays = inputs.audio.overlays.default;
+  nixpkgs.overlays = [ inputs.audio.overlays.default ];
 
   environment.systemPackages = with pkgs; [
     btrfs-progs # tools to use btrfs with
