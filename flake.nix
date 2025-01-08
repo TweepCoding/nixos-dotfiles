@@ -52,6 +52,9 @@
         font = "JetBrainsMono Nerd Font Mono";
         editor = "nvim";
       };
+      pkgs = import nixpkgs {
+        overlays = audio.overlays.default;
+      };
     in
     {
       nixosConfigurations.stark =
@@ -63,7 +66,7 @@
             hostname = "stark";
           };
         in
-        nixpkgs.lib.nixosSystem {
+        pkgs.lib.nixosSystem {
           system = systemSettings.system;
           specialArgs = {
             inherit systemSettings;
@@ -76,17 +79,6 @@
             home-manager.nixosModules.default
             sops-nix.nixosModules.sops
             nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen2
-            (
-              { pkgs, ... }:
-              {
-                nixpkgs = {
-                  overlays = [
-                    self.overlay
-                    audio.overlays.default
-                  ];
-                };
-              }
-            )
           ];
         };
       nixosConfigurations.eisen =
@@ -98,7 +90,7 @@
             hostname = "eisen";
           };
         in
-        nixpkgs.lib.nixosSystem {
+        pkgs.lib.nixosSystem {
           system = systemSettings.system;
           specialArgs = {
             inherit systemSettings;
@@ -110,17 +102,6 @@
             ./hosts/eisen/configuration.nix
             home-manager.nixosModules.default
             sops-nix.nixosModules.sops
-            (
-              { pkgs, ... }:
-              {
-                nixpkgs = {
-                  overlays = [
-                    self.overlay
-                    audio.overlays.default
-                  ];
-                };
-              }
-            )
           ];
         };
     };
