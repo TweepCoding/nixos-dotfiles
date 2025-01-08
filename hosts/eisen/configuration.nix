@@ -109,6 +109,7 @@ in
     testdisk
     neuralnote
     bitwig-studio5-latest
+    godot_4
     grimblast
   ];
 
