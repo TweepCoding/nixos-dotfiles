@@ -97,7 +97,6 @@ in
     eza
     oh-my-posh
     wget
-    inputs.zen-browser.packages."${pkgs.system}".default # zen browser
     libinput
     rofi-wayland
     vesktop

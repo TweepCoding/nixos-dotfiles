@@ -1,0 +1,29 @@
+{
+  options,
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib;
+with lib.custom;
+let
+  cfg = config.suites.creation;
+in
+{
+  options.suites.creation = with types; {
+    enable = mkBoolOpt false "Enable the creation suite";
+  };
+
+  config = mkIf cfg.enable {
+    suites.common.enable = true;
+
+    environment.systemPackages = with pkgs; [
+      bitwig-studio5-latest
+      gdtoolkit_4
+      godot_4
+      godot_4-export-templates
+      neuralnote
+    ];
+  };
+}
