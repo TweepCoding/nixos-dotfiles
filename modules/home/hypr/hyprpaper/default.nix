@@ -1,3 +1,9 @@
+{ config, lib, ... }:
+with lib;
+with lib.custom;
+let
+  cfg = config.dunst;
+in
 {
   services.hyprpaper = {
     enable = true;

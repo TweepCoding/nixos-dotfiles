@@ -17,6 +17,7 @@ in
   imports = [
     # include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./home.nix
     ../../modules/nixos/sops
     ../../modules/nixos/fish
     ../../modules/nixos/virtualisation
@@ -27,6 +28,7 @@ in
 
   networking.hostName = systemSettings.hostname;
   networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.powersave = true;
 
   time.timeZone = systemSettings.timezone;
 

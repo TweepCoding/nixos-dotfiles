@@ -1,21 +1,18 @@
 {
-  description = "Nixos config flake";
+  description = "Tweep's NixOS System flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
     audio = {
       url = "github:polygon/audio.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,6 +27,28 @@
     };
   };
 
+  outputs =
+    inputs@{ flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = with inputs; [
+        ez-configs.flakeModule
+      ];
+      systems = [
+        "x86_64-linux"
+      ];
+
+      ezConfigs = {
+        root = ./.;
+        globalArgs = { inherit inputs; };
+        nixos.modulesDirectory = ./modules/nixos;
+        home.modulesDirectory = ./modules/home;
+        nixos.configurationsDirectory = ./hosts;
+        home.configurationsDirectory = ./hosts;
+      };
+    };
+}
+
+/*
   outputs =
     {
       self,
@@ -102,4 +121,4 @@
           ];
         };
     };
-}
+*/
