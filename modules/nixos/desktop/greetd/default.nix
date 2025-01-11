@@ -15,7 +15,7 @@ in
       vt = 3;
       settings = rec {
         initial_session = {
-          user = userSettings.username;
+          user = config.user.name;
           command = "${pkgs.hyprland}/bin/Hyprland";
         };
         default_session = initial_session;

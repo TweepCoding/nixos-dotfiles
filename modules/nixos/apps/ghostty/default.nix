@@ -15,7 +15,7 @@ in
       settings = {
         theme = "catppuccin-mocha";
         font-size = 12;
-        font-family = userSettings.font;
+        font-family = "JetbrainsMono Nerd Font Mono";
         window-decoration = false;
         background-opacity = 0.9;
         resize-overlay-position = "bottom-right";

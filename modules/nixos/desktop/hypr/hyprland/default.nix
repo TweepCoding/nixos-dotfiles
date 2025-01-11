@@ -29,8 +29,8 @@ in
           ++ lib.optional (cfg.externalMonitor != "") [
             "${cfg.externalMonitor},highres,auto,1,bitdepth,8,mirror,${cfg.mainMonitor}"
           ];
-        "$terminal" = userSettings.term;
-        "$fileManager" = userSettings.fileManager;
+        "$terminal" = "ghostty";
+        "$fileManager" = "nemo";
         "$menu" = "sh $HOME/.config/rofi/bin/{launcher,runner,powermenu,screenshot}";
         "$powermenu" = "wlogout -p layer-shell";
         "$discord" = "vesktop";
@@ -50,7 +50,7 @@ in
           repeat_delay = 300;
 
           follow_mouse = 1;
-          sensitivity = (if systemSettings.hostname == "stark" then 1 else 0);
+          sensitivity = 1;
 
           touchpad = {
             disable_while_typing = false;
