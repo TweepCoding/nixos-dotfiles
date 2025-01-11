@@ -26,100 +26,43 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-ld = {
+      url = "github:Mic92/nix-ld";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    snowfall-lib = {
+      url = "github:snowfallorg/lib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    inputs@{ flake-parts, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = with inputs; [
-        ez-configs.flakeModule
-      ];
-      systems = [
-        "x86_64-linux"
-      ];
-
-      ezConfigs = {
-        root = ./.;
-        globalArgs = { inherit inputs; };
-        nixos.modulesDirectory = ./modules/nixos;
-        home.modulesDirectory = ./modules/home;
-        nixos.configurationsDirectory = ./hosts;
-        home.configurationsDirectory = ./hosts;
-      };
-    };
-}
-
-/*
-  outputs =
-    {
-      self,
-      nixpkgs,
-      nixos-hardware,
-      home-manager,
-      sops-nix,
-      audio,
-      ...
-    }@inputs:
+    inputs:
     let
-      inherit (self) outputs;
-      userSettings = {
-        name = "Tweep";
-        username = "tweep";
-        wm = "hyprland";
-        browser = "zen";
-        fileManager = "thunar";
-        term = "ghostty";
-        font = "JetBrainsMono Nerd Font Mono";
-        editor = "nvim";
+      lib = inputs.snowfall-lib.mkLib {
+        inherit inputs;
+        src = ./.;
+
+        snowfall = {
+          meta = {
+            name = "dotfiles";
+            title = "dotfiles";
+          };
+
+          namespace = "custom";
+        };
       };
     in
-    {
-      nixosConfigurations.stark =
-        let
-          systemSettings = {
-            system = "x86_64-linux";
-            timezone = "America/Bogota";
-            locale = "en_US.UTF-8";
-            hostname = "stark";
-          };
-        in
-        nixpkgs.lib.nixosSystem {
-          system = systemSettings.system;
-          specialArgs = {
-            inherit systemSettings;
-            inherit userSettings;
-            inherit inputs;
-            inherit outputs;
-          };
-          modules = [
-            ./hosts/stark/configuration.nix
-            home-manager.nixosModules.default
-            sops-nix.nixosModules.sops
-            nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen2
-          ];
-        };
-      nixosConfigurations.eisen =
-        let
-          systemSettings = {
-            system = "x86_64-linux";
-            timezone = "America/Bogota";
-            locale = "en_US.UTF-8";
-            hostname = "eisen";
-          };
-        in
-        nixpkgs.lib.nixosSystem {
-          system = systemSettings.system;
-          specialArgs = {
-            inherit systemSettings;
-            inherit userSettings;
-            inherit inputs;
-            inherit outputs;
-          };
-          modules = [
-            ./hosts/eisen/configuration.nix
-            home-manager.nixosModules.default
-            sops-nix.nixosModules.sops
-          ];
-        };
-    };
-*/
+    (lib.mkFlake {
+      inherit inputs;
+      src = ./.;
+
+      channels-config = {
+        allowUnfree = true;
+      };
+
+      overlays = with inputs; [
+        audio.overlays.default
+      ];
+    });
+}
