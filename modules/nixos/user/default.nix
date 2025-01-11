@@ -29,6 +29,7 @@ in
       inherit (cfg) name initialPassword;
       home = "/home/${cfg.name}";
       group = "users";
+      shell = pkgs.fish;
 
       # TODO: Check out hashing password inside sops-nix
       # hashedPasswordFile = lib.mkForce config.sops.secrets."system/password".path;

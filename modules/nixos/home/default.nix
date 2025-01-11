@@ -29,8 +29,16 @@ with lib.custom;
       home.stateVersion = config.system.stateVersion;
       home.file = mkAliasDefinitions options.home.file;
       xdg.enable = true;
+      xdg.userDirs = {
+        enable = true;
+        createDirectories = true;
+      };
       xdg.configFile = mkAliasDefinitions options.home.configFile;
       programs = mkAliasDefinitions options.home.programs;
+    };
+
+    programs = {
+      home-manager.enable = true;
     };
 
     home-manager = {

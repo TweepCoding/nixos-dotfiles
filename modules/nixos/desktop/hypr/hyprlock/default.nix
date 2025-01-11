@@ -13,8 +13,7 @@ in
       enable = true;
       settings = {
         background = {
-          # TODO: Make this path directy related to nix-config
-          path = "~/Pictures/background.png";
+          path = ../../../../../images/background.png;
           blur_passes = 2;
           contrast = 0.8916;
           brightness = 0.8172;
@@ -77,7 +76,7 @@ in
           }
         ];
         image = {
-          path = "~/.config/pfp.png";
+          path = ../../../../../images/pfp.png;
           border_size = 2;
           border_color = "rgba(30, 5, 50, .65)";
           size = 130;

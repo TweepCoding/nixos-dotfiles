@@ -16,11 +16,21 @@ in
   };
 
   config = mkIf cfg.enable {
-    desktop.hypr.hyprland.enable = true;
+    desktop.hypr = {
+      hyprland.enable = true;
+      hyprpaper.enable = true;
+      hypridle.enable = true;
+      hyprlock.enable = true;
+    };
+
+    desktop.greetd.enable = true;
+
     apps.zen.enable = true;
     apps.vesktop.enable = true;
 
     suites.common.enable = true;
+
+    system.security.polkit.enable = true;
 
     environment.systemPackages = with pkgs; [
       nemo

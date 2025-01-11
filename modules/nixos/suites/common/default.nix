@@ -43,9 +43,11 @@ in
       starship.enable = true;
       fish.enable = true;
       ghostty.enable = true;
+      gpupg.enable = true;
     };
 
     services.ssh.enable = true;
+    services.misc.enable = true;
 
     programs.dconf.enable = true;
 

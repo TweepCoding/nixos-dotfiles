@@ -3,6 +3,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 with lib;
@@ -17,6 +18,8 @@ in
 
   config = mkIf cfg.enable {
     suites.common.enable = true;
+
+    nixpkgs.overlays = [ inputs.audio.overlays.default ];
 
     environment.systemPackages = with pkgs; [
       bitwig-studio5-latest
