@@ -13,6 +13,12 @@
     creation.enable = true;
   };
 
+  apps.misc = {
+    enableBtrfs = true;
+    enableBattery = true;
+    enableBrightness = true;
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   networking.interfaces.wlp6s0 = {

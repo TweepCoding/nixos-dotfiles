@@ -13,6 +13,11 @@
     creation.enable = true;
   };
 
+  desktop.hypr.hyprland = {
+    disableTrackpad = false;
+    mainMonitor = "HDMI-A-1";
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   networking.interfaces.wlp6s0 = {
