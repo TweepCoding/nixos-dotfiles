@@ -32,7 +32,7 @@ in
       shell = pkgs.fish;
 
       # TODO: Check out hashing password inside sops-nix
-      # hashedPasswordFile = lib.mkForce config.sops.secrets."system/password".path;
+      hashedPasswordFile = lib.mkForce config.sops.secrets."user/password".path;
 
       extraGroups = [
         "wheel"
@@ -46,9 +46,7 @@ in
       ] ++ cfg.extraGroups;
     } // cfg.extraOptions;
 
-    # TODO: Check out hashing password inside sops-nix
-    # users.users.root.hashedPasswordFile = lib.mkForce config.sops.secrets."system/password".path;
-
+    users.users.root.hashedPassword = "!";
     users.mutableUsers = false;
   };
 }

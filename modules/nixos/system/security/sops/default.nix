@@ -76,6 +76,9 @@ with lib.custom;
           owner = config.user.name;
           mode = "0600";
         };
+        "user/password" = {
+          neededForUsers = true;
+        };
       };
     };
     environment.systemPackages = with pkgs; [
