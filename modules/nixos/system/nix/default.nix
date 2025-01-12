@@ -49,7 +49,7 @@ in
               "https://cache.nixos.org/"
             ];
           }
-          // (lib.optionalAttrs config.apps.tools.direnv.enable {
+          // (lib.optionalAttrs config.apps.direnv.enable {
             keep-outputs = true;
             keep-derivations = true;
           });
