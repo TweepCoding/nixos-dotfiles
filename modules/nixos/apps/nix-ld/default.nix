@@ -16,5 +16,5 @@ in
     enable = mkBoolOpt false "Enable nix-ld";
   };
 
-  config = mkIf cfg.enable { programs.nix-ld.enable = true; };
+  config = mkIf cfg.enable { programs.nix-ld.dev.enable = true; };
 }

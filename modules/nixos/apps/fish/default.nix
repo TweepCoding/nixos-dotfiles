@@ -1,8 +1,13 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 with lib;
 with lib.custom;
 let
-  cfg = config.apps.ghostty;
+  cfg = config.apps.fish;
 in
 {
   options.apps.fish = with types; {

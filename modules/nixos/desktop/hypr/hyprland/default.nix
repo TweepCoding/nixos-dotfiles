@@ -14,8 +14,8 @@ in
   options.desktop.hypr.hyprland = with types; {
     enable = mkBoolOpt true "Enables hyprland";
     disableTrackpad = mkBoolOpt true "Disables trackpad (doesn't work, don't ask me, I've tried it all)";
-    mainMonitor = mkOpt types.string "" "Sets the default monitor for Hyprland";
-    externalMonitor = mkOpt types.string "" "Sets a possible external monitor to mirror for Hyprland";
+    mainMonitor = mkOpt types.str "" "Sets the default monitor for Hyprland";
+    externalMonitor = mkOpt types.str "" "Sets a possible external monitor to mirror for Hyprland";
   };
 
   config = mkIf cfg.enable {
