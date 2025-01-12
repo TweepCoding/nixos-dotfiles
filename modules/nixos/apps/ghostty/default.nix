@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, config, ... }:
 with lib;
 with lib.custom;
 let
@@ -9,7 +9,7 @@ in
     enable = mkBoolOpt true "Enable/disable ghostty";
   };
   config = mkIf cfg.enable {
-    home-manager.users.tweep = {
+    home-manager.users.${config.user.name} = {
       programs.ghostty = {
         enable = true;
         enableFishIntegration = true;

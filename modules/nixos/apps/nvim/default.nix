@@ -11,39 +11,32 @@ let
   cfg = config.apps.nvim;
 in
 {
+  imports = [
+    inputs.nixvim.nixosModules.nixvim
+
+    ./plugins/gitsigns.nix
+    ./plugins/which-key.nix
+    ./plugins/telescope.nix
+    ./plugins/conform.nix
+    ./plugins/lsp.nix
+    ./plugins/nvim-cmp.nix
+    ./plugins/mini.nix
+    ./plugins/treesitter.nix
+
+    ./plugins/kickstart/plugins/debug.nix
+    ./plugins/kickstart/plugins/indent-blankline.nix
+    ./plugins/kickstart/plugins/lint.nix
+    ./plugins/kickstart/plugins/autopairs.nix
+
+    ./plugins/custom/plugins/oil.nix
+    ./plugins/custom/plugins/transparent.nix
+  ];
+
   options.apps.nvim = with types; {
     enable = mkBoolOpt true "Enable neovim/nixvim";
   };
 
   config = mkIf cfg.enable {
-    imports = [
-      inputs.nixvim.nixosModules.nixvim
-
-      # Plugins
-      ./plugins/gitsigns.nix
-      ./plugins/which-key.nix
-      ./plugins/telescope.nix
-      ./plugins/conform.nix
-      ./plugins/lsp.nix
-      ./plugins/nvim-cmp.nix
-      ./plugins/mini.nix
-      ./plugins/treesitter.nix
-
-      # NOTE: Add/Configure additional plugins for Kickstart.nixvim
-      #
-      #  Here are some example plugins that I've included in the Kickstart repository.
-      #  Uncomment any of the lines below to enable them (you will need to restart nvim).
-      #
-      ./plugins/kickstart/plugins/debug.nix
-      ./plugins/kickstart/plugins/indent-blankline.nix
-      ./plugins/kickstart/plugins/lint.nix
-      ./plugins/kickstart/plugins/autopairs.nix
-      #
-      # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
-      # Add your plugins to ./plugins/custom/plugins and import them below
-      ./plugins/custom/plugins/oil.nix
-      ./plugins/custom/plugins/transparent.nix
-    ];
 
     programs.nixvim = {
       enable = true;

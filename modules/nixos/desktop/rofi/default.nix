@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, config, ... }:
 with lib;
 with lib.custom;
 let
@@ -9,13 +9,15 @@ in
     enable = mkBoolOpt true "Enable/disable rofi";
   };
   config = mkIf cfg.enable {
-    programs.rofi = {
-      enable = true;
-    };
-    home.file = {
-      ".config/rofi" = {
-        source = ./rofi;
-        recursive = true;
+    home-manager.users.${config.user.name} = {
+      programs.rofi = {
+        enable = true;
+      };
+      home.file = {
+        ".config/rofi" = {
+          source = ./rofi;
+          recursive = true;
+        };
       };
     };
   };

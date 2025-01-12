@@ -12,7 +12,7 @@ let
 in
 {
   options.user = with types; {
-    name = mkOpt str "iogamaster" "The name to use for the user account.";
+    name = mkOpt str "tweep" "The name to use for the user account.";
     initialPassword =
       mkOpt str "password"
         "The initial password to use when the user is first created.";

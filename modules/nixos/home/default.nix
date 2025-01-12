@@ -33,11 +33,9 @@ with lib.custom;
         createDirectories = true;
       };
       xdg.configFile = mkAliasDefinitions options.home.configFile;
-      programs = mkAliasDefinitions options.home.programs;
-    };
-
-    programs = {
-      home-manager.enable = true;
+      programs = (mkAliasDefinitions options.home.programs) // {
+        home-manager.enable = true;
+      };
     };
 
     home-manager = {
