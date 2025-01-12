@@ -13,9 +13,6 @@ in
 {
   options.user = with types; {
     name = mkOpt str "tweep" "The name to use for the user account.";
-    initialPassword =
-      mkOpt str "password"
-        "The initial password to use when the user is first created.";
     extraGroups = mkOpt (listOf str) [ ] "Groups for the user to be assigned.";
     extraOptions = mkOpt attrs { } "Extra options passed to <option>users.users.<name></option>.";
   };
@@ -26,7 +23,7 @@ in
 
     users.users.${cfg.name} = {
       isNormalUser = true;
-      inherit (cfg) name initialPassword;
+      inherit (cfg) name;
       home = "/home/${cfg.name}";
       group = "users";
       shell = pkgs.fish;
