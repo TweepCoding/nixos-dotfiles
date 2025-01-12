@@ -8,10 +8,10 @@
 with lib;
 with lib.custom;
 let
-  cfg = config.apps.gnupg;
+  cfg = config.apps.gpupg;
 in
 {
-  options.apps.gnupg = with types; {
+  options.apps.gpupg = with types; {
     enable = mkBoolOpt false "Enable gnupg";
   };
 

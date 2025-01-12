@@ -10,7 +10,6 @@ with lib.custom;
 {
   imports = with inputs; [
     home-manager.nixosModules.home-manager
-    nix-colors.homeManagerModules.default
   ];
 
   options.home = with types; {

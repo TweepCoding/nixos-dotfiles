@@ -8,11 +8,11 @@
 with lib;
 with lib.custom;
 let
-  cfg = config.apps.tools.nix-ld;
+  cfg = config.apps.nix-ld;
 in
 {
   imports = with inputs; [ nix-ld.nixosModules.nix-ld ];
-  options.apps.tools.nix-ld = with types; {
+  options.apps.nix-ld = with types; {
     enable = mkBoolOpt false "Enable nix-ld";
   };
 
