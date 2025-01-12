@@ -23,5 +23,15 @@ in
       motherboard = "amd";
       server.port = 6742;
     };
+    systemd.user.services.openrgb = {
+      enable = true;
+      description = "OpenRGB control";
+      serviceConfig = {
+        Type = "oneshot";
+        ExecStart = "${pkgs.openrgb} -c ffffff -m Direct";
+      };
+      wantedBy = [ "multi-user.target" ];
+      after = [ "network.target" ];
+    };
   };
 }
