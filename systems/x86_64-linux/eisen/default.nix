@@ -18,6 +18,8 @@
     mainMonitor = "HDMI-A-1";
   };
 
+  services.openrgb.enable = true;
+
   nixpkgs.config.allowUnfree = true;
 
   networking.interfaces.wlp6s0 = {
