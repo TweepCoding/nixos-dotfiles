@@ -27,10 +27,10 @@ in
         settings = {
           monitor =
             [ ",preferred,auto,1" ]
-            ++ lib.optional (cfg.mainMonitor != "") [
+            ++ lib.optionals (cfg.mainMonitor != "") [
               "${cfg.mainMonitor},highres,auto,1,bitdepth,8"
             ]
-            ++ lib.optional (cfg.externalMonitor != "") [
+            ++ lib.optionals (cfg.externalMonitor != "") [
               "${cfg.externalMonitor},highres,auto,1,bitdepth,8,mirror,${cfg.mainMonitor}"
             ];
           "$terminal" = "ghostty";

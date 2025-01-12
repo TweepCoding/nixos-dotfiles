@@ -16,7 +16,7 @@ in
         settings =
           let
             # TODO: Make this picture related directly to nix config
-            backgroundPicture = ../../../../../images/background.png;
+            backgroundPicture = "${../../../../../images/background.png}";
           in
           {
             preload = backgroundPicture;

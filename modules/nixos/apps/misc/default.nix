@@ -48,20 +48,20 @@ in
         xdg-user-dirs
         xdg-utils
       ]
-      ++ lib.optional (cfg.enableExtra) [
+      ++ lib.optionals (cfg.enableExtra) [
         eza
         fzf
         fd
         testdisk
         yt-dlp
       ]
-      ++ lib.optional (cfg.enableBtrfs) [
+      ++ lib.optionals (cfg.enableBtrfs) [
         btrfs-progs # tools to use btrfs with
       ]
-      ++ lib.optional (cfg.enableBattery) [
+      ++ lib.optionals (cfg.enableBattery) [
         cpufrequtils # battery management
       ]
-      ++ lib.optional (cfg.enableBrightness) [
+      ++ lib.optionals (cfg.enableBrightness) [
         brightnessctl
       ];
   };
