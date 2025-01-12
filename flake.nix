@@ -64,5 +64,9 @@
       overlays = with inputs; [
         audio.overlays.default
       ];
+
+      systems.modules.nixos = with inputs; [
+        # my-input.nixosModules.my-module
+      ];
     });
 }
