@@ -39,6 +39,7 @@ in
       grim
       grimblast
       hyprpolkitagent
+      libreoffice
       slurp
     ];
   };
