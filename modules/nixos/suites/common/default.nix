@@ -61,6 +61,7 @@ in
       nix.enable = true;
       time.enable = true;
       xkb.enable = true;
+      zfs.enable = true;
     };
   };
 }
