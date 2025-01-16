@@ -30,6 +30,7 @@ in
         fastfetch
         ffmpeg
         gcc
+        zfs
         imagemagick
         killall
         libinput
