@@ -40,6 +40,7 @@ in
       grimblast
       hyprpolkitagent
       libreoffice
+      filezilla
       slurp
     ];
   };
