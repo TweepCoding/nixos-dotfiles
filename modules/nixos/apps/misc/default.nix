@@ -55,6 +55,7 @@ in
         fd
         testdisk
         yt-dlp
+        mpv
       ]
       ++ lib.optionals (cfg.enableBtrfs) [
         btrfs-progs # tools to use btrfs with
