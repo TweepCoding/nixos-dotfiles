@@ -41,6 +41,7 @@ in
       hyprpolkitagent
       libreoffice
       filezilla
+      qbittorrent
       slurp
     ];
   };
