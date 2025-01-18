@@ -19,6 +19,8 @@
     enableBrightness = true;
   };
 
+  services.jellyfin-custom.enable = true;
+
   nixpkgs.config.allowUnfree = true;
 
   networking.interfaces.wlp6s0 = {
