@@ -42,6 +42,7 @@ in
       libreoffice
       filezilla
       qbittorrent
+      thunderbird
       slurp
     ];
   };
