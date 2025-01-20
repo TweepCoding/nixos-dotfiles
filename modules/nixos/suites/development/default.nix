@@ -20,6 +20,7 @@ in
     apps.nvim.enable = true;
 
     environment.systemPackages = with pkgs; [
+      gitui
     ];
   };
 }
