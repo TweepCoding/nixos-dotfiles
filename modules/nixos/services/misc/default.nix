@@ -16,6 +16,7 @@ in
       envfs.enable = true;
       fwupd.enable = true;
       tumbler.enable = true;
+      tailscale.enable = true;
     };
   };
 }
