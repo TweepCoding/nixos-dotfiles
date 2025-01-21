@@ -19,6 +19,8 @@
     enableBrightness = true;
   };
 
+  desktop.hypr.hyprland.disableTrackpad = true;
+
   services.jellyfin-custom.enable = true;
 
   nixpkgs.config.allowUnfree = true;
