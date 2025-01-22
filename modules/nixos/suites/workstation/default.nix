@@ -33,6 +33,7 @@ in
     system.security.polkit.enable = true;
 
     environment.systemPackages = with pkgs; [
+      wlvncc
       nemo
       xclip
       xarchiver
