@@ -24,6 +24,7 @@ in
       nodejs_22
       yarn
       python314
+      cargo
     ];
   };
 }
