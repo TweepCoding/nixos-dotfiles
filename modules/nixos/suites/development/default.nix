@@ -20,7 +20,10 @@ in
     apps.nvim.enable = true;
 
     environment.systemPackages = with pkgs; [
-      gitui
+      lazygit
+      nodejs_22
+      yarn
+      python314
     ];
   };
 }
