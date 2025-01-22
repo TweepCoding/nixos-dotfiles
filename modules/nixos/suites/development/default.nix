@@ -25,6 +25,7 @@ in
       yarn
       python314
       cargo
+      rustc
     ];
   };
 }
