@@ -19,6 +19,8 @@ in
     suites.common.enable = true;
     apps.nvim.enable = true;
 
+    virtualisation.docker.enable = true;
+
     environment.systemPackages = with pkgs; [
       lazygit
       nodejs_22
