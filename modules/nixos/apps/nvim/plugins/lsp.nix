@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.nixvim = {
     # Dependencies
     # { 'Bilal2453/luvit-meta', lazy = true },
@@ -55,7 +56,6 @@
         nil_ls = {
           enable = true;
         };
-
         lua_ls = {
           enable = true;
 

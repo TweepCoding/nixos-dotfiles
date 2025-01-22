@@ -42,6 +42,7 @@ in
         swappy
         swaynotificationcenter
         tmux
+        tree
         unzip
         wget
         wl-clipboard

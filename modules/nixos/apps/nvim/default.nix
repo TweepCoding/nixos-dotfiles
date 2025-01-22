@@ -30,6 +30,7 @@ in
 
     ./plugins/custom/plugins/oil.nix
     ./plugins/custom/plugins/transparent.nix
+    ./plugins/custom/plugins/typescript_tools.nix
   ];
 
   options.apps.nvim = with types; {
