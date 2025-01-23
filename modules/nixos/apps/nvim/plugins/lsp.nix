@@ -56,6 +56,24 @@
         nil_ls = {
           enable = true;
         };
+        emmet_ls = {
+          enable = true;
+        };
+        svelte = {
+          enable = true;
+        };
+        jsonls = {
+          enable = true;
+        };
+        cssls = {
+          enable = true;
+        };
+        html = {
+          enable = true;
+        };
+        tailwindcss = {
+          enable = true;
+        };
         lua_ls = {
           enable = true;
 

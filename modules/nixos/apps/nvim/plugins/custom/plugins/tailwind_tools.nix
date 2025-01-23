@@ -1,6 +1,6 @@
 {
   programs.nixvim = {
-    plugins.emmet = {
+    plugins.tailwind-tools = {
       enable = true;
     };
   };
