@@ -74,6 +74,9 @@
         tailwindcss = {
           enable = true;
         };
+        gdscript = {
+          enable = true;
+        };
         lua_ls = {
           enable = true;
 
