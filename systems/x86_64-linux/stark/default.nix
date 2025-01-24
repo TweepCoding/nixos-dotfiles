@@ -31,6 +31,7 @@
   desktop.hypr.hyprland.disableTrackpad = true;
 
   services.jellyfin-custom.enable = true;
+  services.logind.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
