@@ -76,6 +76,7 @@
         };
         gdscript = {
           enable = true;
+          package = null;
         };
         lua_ls = {
           enable = true;

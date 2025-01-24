@@ -35,6 +35,7 @@ in
     environment.systemPackages = with pkgs; [
       wlvncc
       nemo
+      obs-studio
       xclip
       xarchiver
       grim
