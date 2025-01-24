@@ -78,6 +78,9 @@
           enable = true;
           package = null;
         };
+        dartls = {
+          enable = true;
+        };
         lua_ls = {
           enable = true;
 

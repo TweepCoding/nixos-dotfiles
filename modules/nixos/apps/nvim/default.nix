@@ -32,6 +32,7 @@ in
     ./plugins/custom/plugins/transparent.nix
     ./plugins/custom/plugins/typescript_tools.nix
     ./plugins/custom/plugins/tailwind_tools.nix
+    ./plugins/custom/plugins/flutter_tools.nix
   ];
 
   options.apps.nvim = with types; {
