@@ -22,12 +22,14 @@ in
     virtualisation.docker.enable = true;
 
     environment.systemPackages = with pkgs; [
+      android-studio-full
       lazygit
       nodejs_22
       yarn
       python314
       cargo
       rustc
+      flutter
     ];
   };
 }
