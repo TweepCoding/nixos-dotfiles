@@ -31,6 +31,7 @@ in
         ffmpeg
         gcc
         zfs
+        libxfs
         imagemagick
         killall
         libinput
