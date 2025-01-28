@@ -42,6 +42,7 @@ in
       grimblast
       hyprpolkitagent
       libreoffice
+      blueman
       filezilla
       qbittorrent
       thunderbird
