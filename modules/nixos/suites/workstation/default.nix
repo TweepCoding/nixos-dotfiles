@@ -29,6 +29,7 @@ in
     apps.vesktop.enable = true;
 
     suites.common.enable = true;
+    services.mpris.enable = true;
 
     system.security.polkit.enable = true;
 
