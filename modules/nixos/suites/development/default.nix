@@ -23,6 +23,7 @@ in
 
     environment.systemPackages = with pkgs; [
       android-studio-full
+      nushell
       lazygit
       nodejs_22
       yarn
