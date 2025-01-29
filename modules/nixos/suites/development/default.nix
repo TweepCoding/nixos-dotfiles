@@ -22,7 +22,7 @@ in
     virtualisation.docker.enable = true;
 
     environment.systemPackages = with pkgs; [
-      # android-studio-full
+      android-studio-full
       lazygit
       nodejs_22
       yarn

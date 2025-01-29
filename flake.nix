@@ -51,13 +51,23 @@
           namespace = "custom";
         };
       };
+      system = "x86_64-linux";
     in
     (lib.mkFlake {
       inherit inputs;
       src = ./.;
 
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+        config = {
+          android_sdk.accept_license = true;
+          allowUnfree = true;
+        };
+      };
+
       channels-config = {
         allowUnfree = true;
+        android_sdk.accept_license = true;
       };
 
       overlays = with inputs; [
