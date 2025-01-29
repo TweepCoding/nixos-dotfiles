@@ -26,6 +26,7 @@ in
         FastConnectable = true;
         JustWorksRepairing = "always";
         Privacy = "device";
+        Experimental = true;
       };
       Policy = {
         AutoEnable = true;
