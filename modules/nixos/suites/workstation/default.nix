@@ -27,6 +27,7 @@ in
 
     apps.zen.enable = true;
     apps.vesktop.enable = true;
+    apps.ghostty.enable = true;
 
     suites.common.enable = true;
     services.mpris.enable = true;

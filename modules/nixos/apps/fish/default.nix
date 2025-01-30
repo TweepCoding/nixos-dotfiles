@@ -29,7 +29,7 @@ in
         	${pkgs.starship}/bin/starship init fish | source
         	'';
       shellAliases = {
-        vite = null;
+        vite = "yarn create vite";
         nixpublish = "git -C ~/.config/nixos/ push origin main";
         fastfetch = "fastfetch --logo .config/nixos/images/nixos.png --logo-type kitty-direct";
         ls = "eza";
