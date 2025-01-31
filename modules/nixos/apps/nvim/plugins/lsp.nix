@@ -173,6 +173,15 @@
               desc = "LSP: [W]orkspace [S]ymbols";
             };
           }
+          # Show error in the current line
+          {
+            mode = "n";
+            key = "<leader>e";
+            action.__raw = "function() vim.diagnostic.open_float({ border = 'rounded' }) end";
+            options = {
+              desc = "LSP: [W]orkspace [S]ymbols";
+            };
+          }
         ];
 
         lspBuf = {
