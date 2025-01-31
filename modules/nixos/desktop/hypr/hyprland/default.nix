@@ -76,7 +76,7 @@ in
           };
           decoration = {
             blur = {
-              enabled = true;
+              enabled = false;
               size = 5;
               passes = 1;
             };

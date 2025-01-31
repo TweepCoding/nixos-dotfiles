@@ -19,7 +19,7 @@ in
           font-size = 12;
           font-family = "JetbrainsMono Nerd Font Mono";
           window-decoration = false;
-          background-opacity = 0.8;
+          background-opacity = 0.92;
           resize-overlay-position = "bottom-right";
         };
       };
