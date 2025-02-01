@@ -34,8 +34,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  networking.interfaces.wlp6s0 = {
-    name = "wlp6s0";
+  networking.interfaces.wlp3s0 = {
+    name = "wlp3s0";
     useDHCP = lib.mkDefault true;
   };
 
