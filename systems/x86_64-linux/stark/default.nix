@@ -19,19 +19,9 @@
     enableBrightness = true;
   };
 
-  swapDevices = [
-    {
-      device = "/var/lib/swapfile";
-      size = 64 * 1024;
-    }
-  ];
-
   zramSwap.enable = true;
 
   desktop.hypr.hyprland.disableTrackpad = true;
-
-  services.jellyfin-custom.enable = true;
-
   nixpkgs.config.allowUnfree = true;
 
   networking.interfaces.wlp3s0 = {
