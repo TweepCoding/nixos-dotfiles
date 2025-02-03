@@ -48,7 +48,9 @@ in
       filezilla
       qbittorrent
       thunderbird
+      zathura
       slurp
+      texliveSmall
     ];
   };
 }

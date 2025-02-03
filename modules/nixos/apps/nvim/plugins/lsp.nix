@@ -52,6 +52,9 @@
         };
         pyright = {
           enable = true;
+          extraOptions = {
+            analysis.diagnosticMode = "workspace";
+          };
         };
         nil_ls = {
           enable = true;
@@ -79,6 +82,9 @@
           package = null;
         };
         dartls = {
+          enable = true;
+        };
+        texlab = {
           enable = true;
         };
         lua_ls = {
