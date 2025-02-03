@@ -34,6 +34,7 @@ in
     ./plugins/custom/plugins/tailwind_tools.nix
     ./plugins/custom/plugins/flutter_tools.nix
     ./plugins/custom/plugins/none_ls.nix
+    ./plugins/custom/plugins/vimtex.nix
   ];
 
   options.apps.nvim = with types; {
