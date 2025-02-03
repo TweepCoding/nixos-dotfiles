@@ -50,7 +50,7 @@ in
       thunderbird
       zathura
       slurp
-      texliveSmall
+      texliveFull
     ];
   };
 }
