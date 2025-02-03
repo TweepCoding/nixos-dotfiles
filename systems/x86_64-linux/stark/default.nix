@@ -21,7 +21,12 @@
 
   zramSwap.enable = true;
 
-  desktop.hypr.hyprland.disableTrackpad = true;
+  desktop.hypr.hyprland = {
+    disableTrackpad = true;
+    mainMonitor = "eDP-1";
+    externalMonitor = "HDMI-A-1";
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   networking.interfaces.wlp3s0 = {
