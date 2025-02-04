@@ -23,6 +23,7 @@ in
 
     environment.systemPackages = with pkgs; [
       android-studio-full
+      pgadmin4-desktopmode
       nushell
       lazygit
       nodejs_22
