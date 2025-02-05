@@ -4,7 +4,7 @@
       enable = true;
       sources = {
         diagnostics.markdownlint.enable = true;
-        # formatting.black.enable = true;
+        formatting.black.enable = true;
       };
     };
   };
