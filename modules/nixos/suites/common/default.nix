@@ -26,6 +26,7 @@ in
         FastConnectable = true;
         JustWorksRepairing = "always";
         Privacy = "device";
+        Experimental = true;
       };
       Policy = {
         AutoEnable = true;
@@ -42,7 +43,7 @@ in
       nix-ld.enable = true;
       starship.enable = true;
       fish.enable = true;
-      ghostty.enable = true;
+      tmux.enable = true;
       gpupg.enable = true;
     };
 

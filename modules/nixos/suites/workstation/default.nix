@@ -27,25 +27,30 @@ in
 
     apps.zen.enable = true;
     apps.vesktop.enable = true;
+    apps.ghostty.enable = true;
+    apps.obs.enable = true;
 
     suites.common.enable = true;
+    services.mpris.enable = true;
 
     system.security.polkit.enable = true;
 
     environment.systemPackages = with pkgs; [
       wlvncc
       nemo
-      obs-studio
       xclip
       xarchiver
       grim
       grimblast
       hyprpolkitagent
       libreoffice
+      blueman
       filezilla
       qbittorrent
       thunderbird
+      zathura
       slurp
+      texliveFull
     ];
   };
 }

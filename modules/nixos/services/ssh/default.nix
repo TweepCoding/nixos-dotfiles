@@ -28,6 +28,11 @@ in
             user = "git";
             identityFile = "/home/${config.user.name}/.ssh/offline_key";
           };
+          "fern" = {
+            hostname = "fern.ferret-ling.ts.net";
+            user = "root";
+            identityFile = "/home/${config.user.name}/.ssh/offline_key";
+          };
         };
       };
     };

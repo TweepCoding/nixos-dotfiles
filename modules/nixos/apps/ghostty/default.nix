@@ -13,12 +13,13 @@ in
       programs.ghostty = {
         enable = true;
         enableFishIntegration = true;
+        installVimSyntax = true;
         settings = {
           theme = "catppuccin-mocha";
           font-size = 12;
           font-family = "JetbrainsMono Nerd Font Mono";
           window-decoration = false;
-          background-opacity = 0.9;
+          background-opacity = 0.92;
           resize-overlay-position = "bottom-right";
         };
       };

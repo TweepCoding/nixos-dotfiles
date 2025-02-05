@@ -19,24 +19,18 @@
     enableBrightness = true;
   };
 
-  swapDevices = [
-    {
-      device = "/var/lib/swapfile";
-      size = 64 * 1024;
-    }
-  ];
-
   zramSwap.enable = true;
 
-  desktop.hypr.hyprland.disableTrackpad = true;
-
-  services.jellyfin-custom.enable = true;
-  services.logind.enable = true;
+  desktop.hypr.hyprland = {
+    disableTrackpad = true;
+    mainMonitor = "eDP-1";
+    externalMonitor = "HDMI-A-1";
+  };
 
   nixpkgs.config.allowUnfree = true;
 
-  networking.interfaces.wlp6s0 = {
-    name = "wlp6s0";
+  networking.interfaces.wlp3s0 = {
+    name = "wlp3s0";
     useDHCP = lib.mkDefault true;
   };
 

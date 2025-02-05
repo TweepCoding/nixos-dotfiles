@@ -14,6 +14,7 @@ in
       programs.git = {
         enable = true;
         delta.enable = true;
+        lfs.enable = true;
         aliases = {
           lg = "log --oneline --decorate --graph";
           amend = "!git add . && git commit --amend --no-edit";

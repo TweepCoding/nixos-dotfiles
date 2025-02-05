@@ -22,12 +22,16 @@ in
     virtualisation.docker.enable = true;
 
     environment.systemPackages = with pkgs; [
+      android-studio-full
+      pgadmin4-desktopmode
+      nushell
       lazygit
       nodejs_22
       yarn
       python314
       cargo
       rustc
+      flutter
     ];
   };
 }

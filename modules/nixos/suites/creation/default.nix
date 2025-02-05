@@ -20,6 +20,7 @@ in
     suites.common.enable = true;
 
     environment.systemPackages = with pkgs; [
+      kdePackages.kdenlive
       bitwig-studio5-latest
       gdtoolkit_4
       godot_4

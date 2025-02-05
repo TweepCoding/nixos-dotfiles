@@ -52,6 +52,9 @@
         };
         pyright = {
           enable = true;
+          extraOptions = {
+            analysis.diagnosticMode = "workspace";
+          };
         };
         nil_ls = {
           enable = true;
@@ -77,6 +80,12 @@
         gdscript = {
           enable = true;
           package = null;
+        };
+        dartls = {
+          enable = true;
+        };
+        texlab = {
+          enable = true;
         };
         lua_ls = {
           enable = true;
@@ -166,6 +175,15 @@
             mode = "n";
             key = "<leader>ws";
             action.__raw = "require('telescope.builtin').lsp_dynamic_workspace_symbols";
+            options = {
+              desc = "LSP: [W]orkspace [S]ymbols";
+            };
+          }
+          # Show error in the current line
+          {
+            mode = "n";
+            key = "<leader>e";
+            action.__raw = "function() vim.diagnostic.open_float({ border = 'rounded' }) end";
             options = {
               desc = "LSP: [W]orkspace [S]ymbols";
             };

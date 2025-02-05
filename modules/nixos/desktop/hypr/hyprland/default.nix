@@ -62,7 +62,7 @@ in
               scroll_factor = 0.1;
             };
           };
-          device = lib.optional (!cfg.disableTrackpad) {
+          device = lib.optional (cfg.disableTrackpad) {
             name = "synps/2-synaptics-touchpad";
             enabled = false;
           };
@@ -76,9 +76,9 @@ in
           };
           decoration = {
             blur = {
-              enabled = true;
-              size = 2;
-              passes = 2;
+              enabled = false;
+              size = 5;
+              passes = 1;
             };
             shadow = {
               enabled = true;

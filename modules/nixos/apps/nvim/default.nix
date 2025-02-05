@@ -32,6 +32,9 @@ in
     ./plugins/custom/plugins/transparent.nix
     ./plugins/custom/plugins/typescript_tools.nix
     ./plugins/custom/plugins/tailwind_tools.nix
+    ./plugins/custom/plugins/flutter_tools.nix
+    ./plugins/custom/plugins/none_ls.nix
+    ./plugins/custom/plugins/vimtex.nix
   ];
 
   options.apps.nvim = with types; {
@@ -259,11 +262,29 @@ in
         end
       '';
 
+      extraConfigLua = ''
+        -- Set Spanish spell check
+        vim.opt.spell = true
+        vim.opt.spelllang = "es,en"
+
+        -- Ensure spell directory exists
+        local spell_dir = vim.fn.stdpath("data") .. "/site/spell"
+        vim.fn.mkdir(spell_dir, "p")
+
+        -- Download Spanish spell file if missing
+        local es_spell = spell_dir .. "/es.utf-8.spl"
+        if vim.fn.filereadable(es_spell) == 0 then
+          vim.fn.system({"wget", "-P", spell_dir, "https://ftp.nluug.nl/vim/runtime/spell/es.utf-8.spl"})
+          vim.fn.system({"wget", "-P", spell_dir, "https://ftp.nluug.nl/vim/runtime/spell/es.utf-8.sug"})
+        end
+      '';
+
       # The line beneath this is called `modeline`. See `:help modeline`
       # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraconfigluapost
       extraConfigLuaPost = ''
         -- vim: ts=2 sts=2 sw=2 et
       '';
+
     };
 
   };
