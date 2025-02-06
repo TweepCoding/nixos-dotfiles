@@ -21,6 +21,9 @@ in
 
     virtualisation.docker.enable = true;
 
+    # Docker is slowing down my boot time, so while this is nice, I'll disable it
+    virtualisation.docker.enableOnBoot = false;
+
     environment.systemPackages = with pkgs; [
       android-studio-full
       pgadmin4-desktopmode
