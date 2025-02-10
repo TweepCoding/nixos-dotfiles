@@ -51,6 +51,7 @@ in
       zathura
       slurp
       texliveFull
+      texlivePackages.pgfgantt
     ];
   };
 }
