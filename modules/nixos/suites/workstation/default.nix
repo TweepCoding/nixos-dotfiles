@@ -51,6 +51,7 @@ in
       zathura
       slurp
       texliveFull
+      postgresql # No service running, use docker for that
     ];
   };
 }
