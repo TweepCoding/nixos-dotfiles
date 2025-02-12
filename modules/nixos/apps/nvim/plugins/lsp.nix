@@ -50,11 +50,8 @@
         gopls = {
           enable = true;
         };
-        pyright = {
+        basedpyright = {
           enable = true;
-          extraOptions = {
-            analysis.diagnosticMode = "workspace";
-          };
         };
         nil_ls = {
           enable = true;
