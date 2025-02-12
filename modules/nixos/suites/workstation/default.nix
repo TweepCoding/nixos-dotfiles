@@ -35,6 +35,9 @@ in
 
     system.security.polkit.enable = true;
 
+    programs.adb.enable = true;
+    users.users.${config.user.name}.extraGroups = [ "adbusers" ];
+
     environment.systemPackages = with pkgs; [
       wlvncc
       nemo
