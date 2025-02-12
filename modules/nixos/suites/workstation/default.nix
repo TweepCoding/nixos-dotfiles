@@ -57,6 +57,7 @@ in
       postgresql # No service running, use docker for that
       keepassxc
       schemaspy # Testing
+      devenv
     ];
   };
 }
