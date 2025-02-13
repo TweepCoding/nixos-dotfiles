@@ -25,7 +25,6 @@ in
     virtualisation.docker.enableOnBoot = false;
 
     environment.systemPackages = with pkgs; [
-      android-studio-full
       pgadmin4-desktopmode
       nushell
       lazygit
@@ -34,7 +33,6 @@ in
       python314
       cargo
       rustc
-      flutter
     ];
   };
 }
