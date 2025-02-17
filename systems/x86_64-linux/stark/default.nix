@@ -22,7 +22,7 @@
   zramSwap.enable = true;
 
   desktop.hypr.hyprland = {
-    disableTrackpad = true;
+    disableTrackpad = false;
     mainMonitor = "eDP-1";
     externalMonitor = "HDMI-A-1";
   };
