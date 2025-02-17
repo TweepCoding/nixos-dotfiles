@@ -31,7 +31,9 @@ in
     apps.obs.enable = true;
 
     suites.common.enable = true;
+
     services.mpris.enable = true;
+    services.ollama-custom.enable = true;
 
     system.security.polkit.enable = true;
 
@@ -58,7 +60,6 @@ in
       keepassxc
       schemaspy # Testing
       devenv
-      ollama
       direnv
     ];
   };
