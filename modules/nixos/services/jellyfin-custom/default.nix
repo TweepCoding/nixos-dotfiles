@@ -11,7 +11,7 @@ let
 in
 {
   options.services.jellyfin-custom = with types; {
-    enable = mkBoolOpt true "Enable/disable Jellyfin server";
+    enable = mkBoolOpt false "Enable/disable Jellyfin server";
   };
   config = mkIf cfg.enable {
     environment.systemPackages = [

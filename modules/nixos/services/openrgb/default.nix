@@ -11,7 +11,7 @@ let
 in
 {
   options.services.openrgb = with types; {
-    enable = mkBoolOpt true "Enable/disable OpenRGB";
+    enable = mkBoolOpt false "Enable/disable OpenRGB";
   };
   config = mkIf cfg.enable {
     environment.systemPackages = [
