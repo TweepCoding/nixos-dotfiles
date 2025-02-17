@@ -58,6 +58,7 @@ in
       keepassxc
       schemaspy # Testing
       devenv
+      ollama
       direnv
     ];
   };
