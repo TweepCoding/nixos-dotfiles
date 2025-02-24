@@ -58,6 +58,7 @@ in
       texliveFull
       postgresql # No service running, use docker for that
       keepassxc
+      rclone
       schemaspy # Testing
       devenv
       direnv
