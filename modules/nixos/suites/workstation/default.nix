@@ -59,6 +59,7 @@ in
       postgresql # No service running, use docker for that
       keepassxc
       rclone
+      onedrive
       schemaspy # Testing
       devenv
       direnv
