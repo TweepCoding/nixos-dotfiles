@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 with lib;
 with lib.custom;
 let
@@ -12,6 +17,7 @@ in
     home-manager.users.${config.user.name} = {
       programs.rofi = {
         enable = true;
+        plugins = [ pkgs.rofi-emoji ];
       };
       home.file = {
         ".config/rofi" = {
