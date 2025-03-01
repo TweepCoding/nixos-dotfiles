@@ -33,6 +33,11 @@ in
             user = "root";
             identityFile = "/home/${config.user.name}/.ssh/offline_key";
           };
+          "okarun" = {
+            hostname = "okarun.ferret-ling.ts.net";
+            user = "asistente";
+            identityFile = "/home/${config.user.name}/.ssh/offline_key";
+          };
         };
       };
     };
