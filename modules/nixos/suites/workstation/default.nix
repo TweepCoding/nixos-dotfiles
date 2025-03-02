@@ -63,7 +63,7 @@ in
       schemaspy # Testing
       devenv
       direnv
-      ungoogled-chromium
+      brave
     ];
   };
 }
