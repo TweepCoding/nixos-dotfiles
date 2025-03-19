@@ -35,6 +35,7 @@ in
     ./plugins/custom/plugins/flutter_tools.nix
     ./plugins/custom/plugins/none_ls.nix
     ./plugins/custom/plugins/vimtex.nix
+    ./plugins/custom/plugins/neotest.nix
   ];
 
   options.apps.nvim = with types; {

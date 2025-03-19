@@ -19,6 +19,8 @@
     enableBrightness = true;
   };
 
+  apps.steam.enable = true;
+
   zramSwap.enable = true;
 
   desktop.hypr.hyprland = {
