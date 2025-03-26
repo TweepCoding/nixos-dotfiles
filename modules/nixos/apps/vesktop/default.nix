@@ -18,7 +18,7 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = [
       pkgs.vesktop
-      pkgs.xwaylandvideobridge
+      pkgs.kdePackages.xwaylandvideobridge
     ];
   };
 }
