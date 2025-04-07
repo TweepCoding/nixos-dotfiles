@@ -32,6 +32,8 @@ in
       yarn
       python314
       cargo
+      terraform
+      google-cloud-sdk
       rustc
     ];
   };
