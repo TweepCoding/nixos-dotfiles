@@ -236,7 +236,7 @@ in
         # Detect tabstop and shiftwidth automatically
         # https://nix-community.github.io/nixvim/plugins/sleuth/index.html
         sleuth = {
-          enable = true;
+          enable = false;
         };
 
         # Highlight todo, notes, etc in comments
