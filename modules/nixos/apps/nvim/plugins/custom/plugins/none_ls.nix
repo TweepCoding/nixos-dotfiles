@@ -5,6 +5,7 @@
       sources = {
         diagnostics.markdownlint.enable = true;
         formatting.black.enable = true;
+        formatting.prettierd.enable = true;
       };
     };
   };

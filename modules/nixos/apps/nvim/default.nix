@@ -36,6 +36,7 @@ in
     ./plugins/custom/plugins/none_ls.nix
     ./plugins/custom/plugins/vimtex.nix
     ./plugins/custom/plugins/neotest.nix
+    ./plugins/custom/plugins/guess-indent.nix
   ];
 
   options.apps.nvim = with types; {
