@@ -12,6 +12,7 @@ in
     programs.starship = {
       enable = true;
       settings = {
+        gcloud.disabled = true;
         palettes = {
           catppuccin_mocha = {
             rosewater = "#f5e0dc";
