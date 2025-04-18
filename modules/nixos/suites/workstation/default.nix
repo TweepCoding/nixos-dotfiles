@@ -29,6 +29,7 @@ in
     apps.vesktop.enable = true;
     apps.ghostty.enable = true;
     apps.obs.enable = true;
+    apps.virtualbox.enable = true;
 
     suites.common.enable = true;
 
