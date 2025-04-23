@@ -31,6 +31,7 @@ in
       nodejs_22
       yarn
       python314
+      uv
       cargo
       terraform
       google-cloud-sdk
