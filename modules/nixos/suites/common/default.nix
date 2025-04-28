@@ -59,7 +59,10 @@ in
     system = {
       fonts.enable = true;
       locale.enable = true;
-      nix.enable = true;
+      nix = {
+        enable = true;
+        package = pkgs.lix;
+      };
       time.enable = true;
       xkb.enable = true;
       zfs.enable = true;
