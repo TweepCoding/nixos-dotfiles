@@ -34,6 +34,7 @@ in
       uv
       cargo
       terraform
+      bruno
       google-cloud-sdk
       rustc
     ];
