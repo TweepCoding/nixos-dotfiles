@@ -23,5 +23,9 @@ in
       enableBattery = true;
       enableBrightness = true;
     };
+
+    environment.systemPackages = with pkgs; [
+      lutris
+    ];
   };
 }
