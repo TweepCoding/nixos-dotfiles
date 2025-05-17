@@ -33,6 +33,7 @@ in
         nixpublish = "git -C ~/.config/nixos/ push origin main";
         fastfetch = "fastfetch --logo .config/nixos/images/nixos.png --logo-type kitty-direct";
         ls = "eza";
+	lg = "lazygit";
         ff = "fastfetch --logo .config/nixos/images/nixos.png --logo-type kitty-direct";
         p = "cd ~/Programming/(search_dirs) && tmux";
       };
