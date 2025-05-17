@@ -30,6 +30,7 @@ in
       lazygit
       nodejs_22
       yarn
+      pnpm
       python314
       uv
       cargo
