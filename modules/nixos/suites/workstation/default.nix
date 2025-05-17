@@ -59,6 +59,8 @@ in
       zathura
       slurp
       texliveFull
+      bitwarden-cli
+      bitwarden-desktop
       postgresql # No service running, use docker for that
       pandoc
       keepassxc
