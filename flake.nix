@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
+    mcp-hub.url = "github:ravitemer/mcp-hub";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     audio = {
       url = "github:polygon/audio.nix";

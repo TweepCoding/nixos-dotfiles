@@ -89,6 +89,27 @@
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
+          "mcp-hub",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1743550720,
+        "narHash": "sha256-hIshGgKZCgWh6AYJpJmRgFdR3WUbkY04o82X05xqQiY=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "c621e8422220273271f52058f618c94e405bb0f5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_2": {
+      "inputs": {
+        "nixpkgs-lib": [
           "nixvim",
           "nixpkgs"
         ]
@@ -512,6 +533,25 @@
         "type": "github"
       }
     },
+    "mcp-hub": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1747411805,
+        "narHash": "sha256-0ZzuCYc3Umi342ZEQdlq3Icm9TYi/zVPz37B3B+9MAo=",
+        "owner": "ravitemer",
+        "repo": "mcp-hub",
+        "rev": "e3bce4eb6ff446a236c9a87082f9f4e0063d6f05",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ravitemer",
+        "repo": "mcp-hub",
+        "type": "github"
+      }
+    },
     "nix-buildproxy": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -601,6 +641,22 @@
     },
     "nixpkgs_3": {
       "locked": {
+        "lastModified": 1743689281,
+        "narHash": "sha256-y7Hg5lwWhEOgflEHRfzSH96BOt26LaYfrYWzZ+VoVdg=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2bfc080955153be0be56724be6fa5477b4eefabb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
         "lastModified": 1745526057,
         "narHash": "sha256-ITSpPDwvLBZBnPRS2bUcHY3gZSwis/uTe255QgMtTLA=",
         "owner": "nixos",
@@ -615,7 +671,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1743448293,
         "narHash": "sha256-bmEPmSjJakAp/JojZRrUvNcDX2R5/nuX6bm+seVaGhs=",
@@ -633,7 +689,7 @@
     },
     "nixvim": {
       "inputs": {
-        "flake-parts": "flake-parts",
+        "flake-parts": "flake-parts_2",
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -704,9 +760,10 @@
         "audio": "audio",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
+        "mcp-hub": "mcp-hub",
         "nix-ld": "nix-ld",
         "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_4",
         "nixvim": "nixvim",
         "snowfall-lib": "snowfall-lib",
         "sops-nix": "sops-nix",
@@ -844,7 +901,7 @@
     "zen-browser": {
       "inputs": {
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1745850086,

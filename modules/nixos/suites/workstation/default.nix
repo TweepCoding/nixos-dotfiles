@@ -1,4 +1,5 @@
 {
+  inputs,
   options,
   config,
   lib,
@@ -63,6 +64,7 @@ in
       bitwarden-desktop
       postgresql # No service running, use docker for that
       pandoc
+      inputs.mcp-hub.packages."${system}".default
       keepassxc
       rclone
       onedrive
