@@ -41,7 +41,7 @@ in
   ];
 
   options.apps.nvim = with types; {
-    enable = mkBoolOpt true "Enable neovim/nixvim";
+    enable = mkBoolOpt false "Enable neovim/nixvim";
   };
 
   config = mkIf cfg.enable {

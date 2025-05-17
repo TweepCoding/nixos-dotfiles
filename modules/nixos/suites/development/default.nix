@@ -17,7 +17,6 @@ in
 
   config = mkIf cfg.enable {
     suites.common.enable = true;
-    apps.nvim.enable = true;
 
     virtualisation.docker.enable = true;
 
@@ -38,6 +37,7 @@ in
       bruno
       google-cloud-sdk
       rustc
+      neovim
     ];
   };
 }
