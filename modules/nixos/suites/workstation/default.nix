@@ -34,6 +34,7 @@ in
     suites.common.enable = true;
 
     services.mpris.enable = true;
+    services.kanata-custom.enable = true;
     services.ollama-custom.enable = true;
 
     system.security.polkit.enable = true;
