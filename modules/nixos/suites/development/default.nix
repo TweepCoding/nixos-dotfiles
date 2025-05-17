@@ -32,6 +32,7 @@ in
       pnpm
       python314
       uv
+      go
       cargo
       terraform
       bruno
