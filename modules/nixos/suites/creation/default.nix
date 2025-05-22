@@ -7,11 +7,9 @@
   ...
 }:
 with lib;
-with lib.custom;
-let
+with lib.custom; let
   cfg = config.suites.creation;
-in
-{
+in {
   options.suites.creation = with types; {
     enable = mkBoolOpt false "Enable the creation suite";
   };
@@ -27,6 +25,7 @@ in
       godot_4-export-templates
       neuralnote
       aseprite
+      inkscape-with-extensions
     ];
   };
 }
