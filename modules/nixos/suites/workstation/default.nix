@@ -7,11 +7,9 @@
   ...
 }:
 with lib;
-with lib.custom;
-let
+with lib.custom; let
   cfg = config.suites.workstation;
-in
-{
+in {
   options.suites.workstation = with types; {
     enable = mkBoolOpt false "Enable the workstation suite";
   };
@@ -42,7 +40,7 @@ in
     system.security.polkit.enable = true;
 
     programs.adb.enable = true;
-    users.users.${config.user.name}.extraGroups = [ "adbusers" ];
+    users.users.${config.user.name}.extraGroups = ["adbusers"];
 
     environment.systemPackages = with pkgs; [
       wlvncc
@@ -59,6 +57,7 @@ in
       thunderbird
       zathura
       slurp
+      obsidian
       texliveFull
       bitwarden-cli
       bitwarden-desktop
