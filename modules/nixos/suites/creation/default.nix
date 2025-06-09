@@ -19,11 +19,7 @@ in {
 
     environment.systemPackages = with pkgs; [
       kdePackages.kdenlive
-      bitwig-studio5-latest
-      gdtoolkit_4
-      godot_4
-      godot_4-export-templates
-      neuralnote
+      bitwig-studio
       aseprite
       inkscape-with-extensions
     ];

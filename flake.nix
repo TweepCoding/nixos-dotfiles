@@ -6,10 +6,6 @@
     hyprland.url = "github:hyprwm/Hyprland";
     mcp-hub.url = "github:ravitemer/mcp-hub";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    audio = {
-      url = "github:polygon/audio.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
     };
@@ -35,45 +31,42 @@
     };
   };
 
-  outputs =
-    inputs:
-    let
-      lib = inputs.snowfall-lib.mkLib {
-        inherit inputs;
-        src = ./.;
-
-        snowfall = {
-          meta = {
-            name = "dotfiles";
-            title = "dotfiles";
-          };
-
-          namespace = "custom";
-        };
-      };
-      system = "x86_64-linux";
-    in
-    (lib.mkFlake {
+  outputs = inputs: let
+    lib = inputs.snowfall-lib.mkLib {
       inherit inputs;
       src = ./.;
 
-      pkgs = import inputs.nixpkgs {
-        inherit system;
-        config = {
-          allowUnfree = true;
+      snowfall = {
+        meta = {
+          name = "dotfiles";
+          title = "dotfiles";
         };
-      };
 
-      channels-config = {
+        namespace = "custom";
+      };
+    };
+    system = "x86_64-linux";
+  in (lib.mkFlake {
+    inherit inputs;
+    src = ./.;
+
+    pkgs = import inputs.nixpkgs {
+      inherit system;
+      config = {
         allowUnfree = true;
       };
+    };
 
-      overlays = with inputs; [
-        audio.overlays.default
-      ];
+    channels-config = {
+      allowUnfree = true;
+    };
 
-      systems.modules.nixos = with inputs; [
-        # my-input.nixosModules.my-module
-      ];
-    });
+    overlays = with inputs; [
+      # audio.overlays.default
+    ];
+
+    systems.modules.nixos = with inputs; [
+      # my-input.nixosModules.my-module
+    ];
+  });
 }
