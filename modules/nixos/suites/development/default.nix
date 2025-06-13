@@ -6,11 +6,9 @@
   ...
 }:
 with lib;
-with lib.custom;
-let
+with lib.custom; let
   cfg = config.suites.development;
-in
-{
+in {
   options.suites.development = with types; {
     enable = mkBoolOpt false "Enable the development suite";
   };
@@ -31,6 +29,7 @@ in
       yarn
       pnpm
       python314
+      wrangler
       uv
       go
       cargo
