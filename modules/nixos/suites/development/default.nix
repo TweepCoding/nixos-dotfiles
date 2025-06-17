@@ -28,6 +28,7 @@ in {
       nodejs_22
       yarn
       pnpm
+      awscli2
       python314
       wrangler
       uv
