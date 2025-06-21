@@ -21,6 +21,8 @@ in {
       kdePackages.kdenlive
       bitwig-studio
       aseprite
+      godot
+      gdtoolkit_4
       inkscape-with-extensions
     ];
   };
