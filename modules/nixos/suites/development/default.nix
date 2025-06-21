@@ -29,6 +29,8 @@ in {
       yarn
       pnpm
       awscli2
+      postman
+      newman
       python314
       wrangler
       uv
