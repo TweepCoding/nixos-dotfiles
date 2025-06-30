@@ -35,11 +35,10 @@ in {
       wrangler
       uv
       go
-      cargo
       terraform
       bruno
       google-cloud-sdk
-      rustc
+      rustup
       neovim
     ];
   };
