@@ -5,11 +5,9 @@
   ...
 }:
 with lib;
-with lib.custom;
-let
+with lib.custom; let
   cfg = config.apps.tmux;
-in
-{
+in {
   options.apps.tmux = with types; {
     enable = mkBoolOpt true "Enable/disable tmux";
   };
@@ -40,7 +38,6 @@ in
               set -g @catppuccin_status_right_separator ""
               set -g @catppuccin_status_right_separator_inverse "no"
               set -g @catppuccin_status_fill "icon"
-              #set -g @catppuccin_status_connect_separator "no"
 
               set -g @catppuccin_directory_text "#{pane_current_path}"
             '';
