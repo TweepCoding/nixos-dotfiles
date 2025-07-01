@@ -6,17 +6,14 @@
   ...
 }:
 with lib;
-with lib.custom;
-let
+with lib.custom; let
   cfg = config.suites.common;
-in
-{
+in {
   options.suites.common = with types; {
     enable = mkBoolOpt false "Enable/disable the common suite";
   };
 
   config = mkIf cfg.enable {
-
     hardware.audio.enable = true;
     hardware.networking.enable = true;
 
@@ -44,6 +41,7 @@ in
       starship.enable = true;
       fish.enable = true;
       tmux.enable = true;
+      zellij.enable = true;
       gpupg.enable = true;
     };
 
