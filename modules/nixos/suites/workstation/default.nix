@@ -23,7 +23,6 @@ in {
     };
 
     desktop.greetd.enable = true;
-    desktop.gtk.enable = true;
 
     apps.zen.enable = true;
     apps.vesktop.enable = true;
