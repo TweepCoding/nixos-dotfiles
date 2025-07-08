@@ -1,10 +1,12 @@
-{ lib, config, ... }:
-with lib;
-with lib.custom;
-let
-  cfg = config.desktop.waybar;
-in
 {
+  lib,
+  config,
+  ...
+}:
+with lib;
+with lib.custom; let
+  cfg = config.desktop.waybar;
+in {
   options.desktop.waybar = with types; {
     enable = mkBoolOpt true "Enable/disable waybar";
   };
@@ -19,7 +21,7 @@ in
               "custom/nixos"
               "hyprland/workspaces"
             ];
-            modules-center = [ "clock" ];
+            modules-center = ["clock"];
             modules-right = [
               "custom/vpn"
               "backlight"
@@ -60,7 +62,7 @@ in
             };
             clock = {
               interval = 30;
-              format = "  {:%I:%M %p}";
+              format = "󰃭  {:%a %F, %I:%M %p}";
             };
             backlight = {
               device = "intel_backlight";
